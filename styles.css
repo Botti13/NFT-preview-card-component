@@ -1,0 +1,121 @@
+:root {
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--cyan-transparent: hsl(178, 100%, 50%, 0.5);     
+--very-dark-blue-main-bg: hsl(217, 54%, 11%);
+--very-dark-blue-card-bg: hsl(216, 50%, 16%);
+--very-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    color: var(--soft-blue);
+    display: grid;
+    place-items: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+h3 {
+    text-align: left;
+    color: white;
+}
+
+h3:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p {
+    font-weight: 300;
+    text-align: left;
+}
+
+hr {
+    border: 1px solid var(--very-dark-blue-line); 
+    width: 100%;
+}
+
+#container {
+    background-color: var(--very-dark-blue-card-bg);
+    border-radius: 20px;
+    margin: 160px 0 16px;
+    padding: 16px;
+    width: 250px;
+    height: 450px;
+    text-align: center;
+}
+
+.icon-eye {
+    background-color: var(--cyan-transparent);
+    border-radius: 10px;
+    display: none;
+    place-items: center;
+    position: absolute;
+    bottom: 608px;
+    width: 250px;
+    height: 247px;
+    z-index: 1;
+}
+
+.img-equilibrium {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.img-equilibrium:hover + .icon-eye {
+    cursor: pointer;    
+    display: grid;
+}
+
+.icon-eth {
+    width: 8px;
+    margin-right: 8px;
+}
+
+.eth {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.icon-clock {
+    width: 16px;
+    margin-right: 8px;
+}
+
+.time-left {
+    color:var(--soft-blue);
+    font-weight: 300;
+    float: right;
+}
+
+.avatar {
+    float: left;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin-right: 16px;
+    width: 24px;
+}
+
+.creator-name {
+    color: white;
+}
+
+.creator-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 1000px) {
+    #container {
+        transform: scale(0.9);
+    }
+
+    .icon-eye {
+        bottom: 216px;
+    }
+}
